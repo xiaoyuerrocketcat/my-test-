@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f00
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+<script>
+    var box = document.querySelector('.box');
+    box.addEventListener('touchstart',function(e){
+        console.log('chumokaishi');
+        console.log(e);
+        var startX = e.changedTouches[0].clientX;
+        console.log(startX);
+        
+
+        
+    })
+    box.addEventListener('touchmove',function(){
+        console.log('move');
+        var startY = e.changedTouches[0].clientY;
+        console.log(startY);
+        
+    })
+    box.addEventListener('touchend',function(){
+        console.log('end');
+        
+    })
+</script>
